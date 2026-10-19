@@ -1,7 +1,8 @@
 import os
 
 from game.models import Food, Medicine
-
+from game.tamagochi import SimpleTamagochi
+from game.clicker import SimpleRandomClicker
 
 def main():
     all_food = [
