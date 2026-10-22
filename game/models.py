@@ -6,18 +6,20 @@ from dataclasses import dataclass
 @dataclass(frozen=True, slots=True)
 class Food:
     """Модель объекта еды"""
+
     name: str  # наименование
     satiety: int  # на сколько единиц утоляет голод
     price: int  # стоимость
 
     def __repr__(self) -> str:
         """Метод для красивого принтинга объекта"""
-        return f'{self.name} стоимость: {self.price}, утоляет голод на {self.satiety} единиц'
+        return f"{self.name} стоимость: {self.price}, утоляет голод на {self.satiety} единиц"
 
 
 @dataclass
 class Medicine:
     """Модель объекта лекарства"""
+
     name: str  # наименование
     price: int  # стоимость
     heal_hp: int  # сколько лечит HP
@@ -35,6 +37,6 @@ class Medicine:
     def __repr__(self) -> str:
         """Метод для красивого принтинга объекта"""
         return (
-            f'{self.name} стоимость: {self.price}, лечит на {self.heal_hp} HP, '
-            f'использований: {self.number_of_uses - self.uses}/{self.number_of_uses}'
+            f"{self.name} стоимость: {self.price}, лечит на {self.heal_hp} HP, "
+            f"использований: {self.number_of_uses - self.uses}/{self.number_of_uses}"
         )
