@@ -94,7 +94,7 @@ class AbstractTamagochi(ABC):
         raise NotImplementedError
 
 
-class SimpleTamagochi(AbstractTamagochi):
+class Tamagochi(AbstractTamagochi):
     """Простая реализация тамагочи"""
 
     def __init__(self) -> None:
@@ -138,11 +138,7 @@ class SimpleTamagochi(AbstractTamagochi):
     @property
     def status(self) -> dict[str, int]:
         """Получение текущего состояния тамагочи в виде словаря"""
-        return {
-            "hunger": self._hunger,
-            "hp": self._hp,
-            "energy": self._energy
-        }
+        return {"hunger": self._hunger, "hp": self._hp, "energy": self._energy}
 
     def is_alive(self) -> bool:
         """Тамагочи жив, если его здоровье больше нуля"""

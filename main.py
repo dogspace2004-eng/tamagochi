@@ -1,10 +1,10 @@
 import os
 
-from game.clicker import SimpleRandomClicker
+from game.clicker import RandomClicker
 from game.exceptions import NotEnoughMoney
-from game.game import SimpleGame
+from game.game import Game
 from game.models import Food, Medicine
-from game.tamagochi import SimpleTamagochi
+from game.tamagochi import Tamagochi
 
 MIN_INCOME = 10
 MAX_INCOME = 20
@@ -22,9 +22,9 @@ def main() -> None:
         Medicine(name="Ибупрофен", price=30, heal_hp=20, number_of_uses=2),
     ]
 
-    tamagochi = SimpleTamagochi()
-    clicker = SimpleRandomClicker(MIN_INCOME, MAX_INCOME)
-    game = SimpleGame(
+    tamagochi = Tamagochi()
+    clicker = RandomClicker(MIN_INCOME, MAX_INCOME)
+    game = Game(
         tamagochi,
         clicker,
         all_food=all_food,

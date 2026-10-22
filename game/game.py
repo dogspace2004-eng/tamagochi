@@ -112,7 +112,7 @@ class AbstractGame(ABC):
         raise NotImplementedError
 
 
-class SimpleGame(AbstractGame):
+class Game(AbstractGame):
     """Простая реализация игры"""
 
     def __init__(

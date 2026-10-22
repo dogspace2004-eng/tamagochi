@@ -24,7 +24,7 @@ class AbstractClicker(ABC):
         raise NotImplementedError
 
 
-class SimpleRandomClicker(AbstractClicker):
+class RandomClicker(AbstractClicker):
     """Простой кликер с случайным доходом за клик."""
 
     def __init__(self, min_income: int, max_income: int) -> None:
