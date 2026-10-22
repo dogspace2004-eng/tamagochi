@@ -194,18 +194,17 @@ class Game(AbstractGame):
         """
         Свойство для доступа к сумке с едой
 
-        :return: копия списка купленной еды
-        """
-        return list(self._food_bag)
+        :return: список с купленной едой"""
+        return self._food_bag
 
     @property
     def medicine(self) -> list[Medicine]:
         """
         Свойство для доступа к сумке с лекарствами
 
-        :return: копия списка купленных лекарств
+        :return: список с купленными лекарствами
         """
-        return list(self._medicine_bag)
+        return self._medicine_bag
 
     def _choose_from(self, catalog: list[Any]) -> Any:
         """
